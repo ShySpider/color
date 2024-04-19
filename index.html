@@ -11,6 +11,11 @@
     <h1>Quiz Couleur</h1>
     <div class="wrapper">
        <p>Choisissez le code RGB correct :</p>
+       <br>
+       <p>Attention une réponse incorrecte enlève 1 point</p>
+
+       <audio id="wrongsound" src="deathsound.mp3"></audio>
+
        <div id="couleur"></div>
        <div class="reponses">
         <div class="reponse">rgb(0,0,0)</div>
@@ -19,7 +24,7 @@
         <div class="reponse">rgb(0,0,0)</div>
        </div>
        <div class="score">
-            Bonnes réponses à la suite : <span id="score">0</span>
+            votre score : <span id="score">0</span>
        </div>
        <a href="https://fr.wikipedia.org/wiki/Rouge_vert_bleu" target="_blank"
         >Besoin d'aide ? Rappels sur le RGB</a
