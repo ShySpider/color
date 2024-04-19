@@ -25,6 +25,7 @@ const initialiser = () => {
   rgbADeviner = reponses[reponseCorrecte].textContent; //on prend une valeur parmi les 4 et on decide que c la bonne reponse
 
   blocCouleur.style.backgroundColor = rgbADeviner; //on affecte la couleur correcte au gros bloc qui sera la couleur a deviner
+  blocCouleur.style.border = "4px solid grey"; // Ajoute une bordure noire de 2 pixels
 };
 
 const verifierReponse = (e) => {
