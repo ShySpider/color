@@ -25,16 +25,18 @@ const initialiser = () => {
   rgbADeviner = reponses[reponseCorrecte].textContent; //on prend une valeur parmi les 4 et on decide que c la bonne reponse
 
   blocCouleur.style.backgroundColor = rgbADeviner; //on affecte la couleur correcte au gros bloc qui sera la couleur a deviner
-  blocCouleur.style.border = "4px solid grey"; // Ajoute une bordure noire de 2 pixels
+  blocCouleur.style.border = "2px solid black"; // Ajoute une bordure noire de 2 pixels
 };
 
 const verifierReponse = (e) => {
   let valeurCliquee = e.target.textContent; //on recup l'element html et le code rgb de la boite cliquee
 
   if (valeurCliquee != rgbADeviner) { //si la valeur est differente != de la reponse à deviner
+    playwrongsound();
     window.alert(`Vous avez perdu ! La réponse était ${rgbADeviner}`);
-    compteurScore = 0;
-    return initialiser(); //pour remettre le compteur a 0
+    compteurScore--;
+    
+    return initialiser(); //pour remettre le compteur à 0
   }
 
   compteurScore++;
@@ -46,3 +48,9 @@ reponses.forEach((rep) => {
 });
 
 initialiser();
+
+// Fonction pour jouer le mauvais son quand on se trompe
+function playwrongsound() {
+  wrongsound.play();
+  }
+  
