@@ -24,6 +24,7 @@ h1{
     margin-bottom: 40px;
     font-size: 60px;
     font-family: "Courgette", cursive;
+    text-shadow: 0px 4px 4px #f8f8f8; 
 
 }
 .wrapper{
@@ -31,19 +32,22 @@ h1{
     background-color: #e6e6e6;
     padding: 30px;
     border-radius: 15px;
-
+    box-shadow: 5px 5px 5px rgb(105, 63, 63);
+   
 }
 #couleur{
+    
     width: 100%;
     height: 200px;
     margin: 20px 0;
-    border-radius: 5px;
+    border-radius: 10px;
+   
 
 }
 .reponses{
     display: grid;
     grid-template-columns: repeat(2, 250px) ; /*2 colonnes pour les réponses*/
-    gap : 20px; /*espace entre les boutons*/
+    gap : 40px; /*espace entre les boutons*/
 }
 .reponse{
     padding: 20px 40px;
@@ -51,10 +55,14 @@ h1{
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 5px 5px 5px rgb(105, 63, 63);
 }
 
 .reponse:hover{
     background-color: #5d5d5d;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold ;
 
 }
 
